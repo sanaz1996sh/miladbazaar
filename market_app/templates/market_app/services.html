@@ -1,0 +1,210 @@
+<!-- End Our Services Section -->
+{%extends 'market_app/base2.html'%}
+
+{%block title%}خدمات ما_بازار بزرگ میلاد{%endblock%}
+
+{%block title2%}خدمات ما{%endblock%}
+
+{%block bread%}خدمات ما{%endblock%}
+
+{%block href%}services/{%endblock%}
+
+{%block content%}
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="/about/"> درباره ی ما</a></h4>
+              <p class="description">بازار بزرگ میلاد شهرکرد یکی از بزرگترین مجتمع های تجاری شهرکرد است   </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="/shop/"> فروشگاه ها</a></h4>
+              <p class="description">دراین مجتمع تجاری انواع فروشگاه ها اعم از پوشاک،زیور الات،تزیینات عقد و عروسی و...وجود دارد</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="/services/"> خدمات ما </a></h4>
+              <p class="description">در بازار بزرگ میلادباوجود فروشگاه های متفاوت به راحتی میتوانید خرید کنید و از وقت خود به بهترین شکل ممکن استفاده کنید </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="/contact/"> تماس با ما</a></h4>
+              <p class="description">برای ارتباط با ما وارد تماس با ما شوید  </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <!--<section class="why-us rtl-why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
+            <a href="https://dl3.3rver.org/hex4/Film-Khareji/trailer/Baymax.2022.Trailer.mp4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">طراحی نوین و زیبا</a></h4>
+              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">طراحی شده با بوت استرپ</a></h4>
+              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>   -->  <!-- End Why Us Section -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section class="service-details">
+      <div class="container">
+
+        <div class="row" dir="ltr">
+
+{%for s in serv%}
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="{{s.serv_pic.url}}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" dir="rtl">{{s.serv_name}}</h5>
+                <p class="card-text" dir="rtl">{{s.serv_desc}}</p>
+               <!-- <div class="read-more" dir="rtl"><a href="#">بیشتربخوانید <i class="bi bi-arrow-left"></i></a></div>  -->
+              </div>
+            </div>
+          </div>
+{%endfor%}
+
+
+          <!--<div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-2.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" dir="rtl"><a href="#">خدمات 2</a></h5>
+                <p class="card-text" dir="rtl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز است.</p>
+                <div class="read-more" dir="rtl"><a href="#">بیشتربخوانید <i class="bi bi-arrow-left"></i></a></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-3.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" dir="rtl"><a href="#">خدمات 3</a></h5>
+                <p class="card-text" dir="rtl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.</p>
+                <div class="read-more" dir="rtl"><a href="#">بیشتربخوانید <i class="bi bi-arrow-left"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-4.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" dir="rtl"><a href="#">خدمات 4</a></h5>
+                <p class="card-text" dir="rtl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.</p>
+                <div class="read-more" dir="rtl"><a href="#">بیشتربخوانید <i class="bi bi-arrow-left"></i></a></div>
+              </div>
+            </div>
+          </div>  -->
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+    <!-- ======= Pricing Section ======= -->
+   <!-- <section class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>قیمت ها</h2>
+          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 box">
+            <h3>رایگان</h3>
+            <h4>رایگان<span>ماهانه</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i>پشتیبانی رایگان</li>
+              <li><i class="bx bx-check"></i>10 مگابایت فضای ذخیره سازی</li>
+              <li><i class="bx bx-check"></i>امکان ایجاد بستر شبکه ای</li>
+              <li class="na"><i class="bx bx-x"></i> <span>ساب دامین اختصاصی</span></li>
+              <li class="na"><i class="bx bx-x"></i> <span>دامنه دات کام</span></li>
+            </ul>
+            <a href="#" class="get-started-btn">بزن بریم</a>
+          </div>
+
+          <div class="col-lg-4 box featured">
+            <h3>کسب و کار</h3>
+            <h4>29000 تومان<span>ماهانه</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i>پشتیبانی رایگان</li>
+              <li><i class="bx bx-check"></i>10 مگابایت فضای ذخیره سازی</li>
+              <li><i class="bx bx-check"></i>امکان ایجاد بستر شبکه ای</li>
+              <li><i class="bx bx-x"></i> <span>ساب دامین اختصاصی</span></li>
+              <li class="na"><i class="bx bx-x"></i> <span>دامنه دات کام</span></li>
+            </ul>
+            <a href="#" class="get-started-btn">بزن بریم</a>
+          </div>
+
+          <div class="col-lg-4 box">
+            <h3>توسعه دهنده</h3>
+            <h4>49000 تومان<span>ماهانه</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i>پشتیبانی رایگان</li>
+              <li><i class="bx bx-check"></i>10 مگابایت فضای ذخیره سازی</li>
+              <li><i class="bx bx-check"></i>امکان ایجاد بستر شبکه ای</li>
+              <li><i class="bx bx-x"></i><span>ساب دامین اختصاصی</span></li>
+              <li><i class="bx bx-x"></i><span>دامنه دات کام</span></li>
+            </ul>
+            <a href="#" class="get-started-btn">بزن بریم</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>   -->  <!-- End Pricing Section -->
+  {%endblock%}
+
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  
+
+ 

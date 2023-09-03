@@ -1,0 +1,127 @@
+{%extends 'market_app/base2.html'%}
+
+{%block title%} خبرها_بازار بزرگ میلاد{%endblock%}
+
+{%block title2%}وبلاگ{%endblock%}
+
+{%block bread%}وبلاگ{%endblock%}
+
+{%block href%}blog/{%endblock%}
+
+{%block content%}
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog rtl-blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" >
+
+          <div class="col-lg-8 entries">
+{%for b in blog1%}
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{{b.blog_pic.url}}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                {{b.blog_title}}
+              </h2>
+
+              <!--<div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">امین احمدی</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">1400/01/01</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 دیدگاه</a></li>
+                </ul>
+              </div>-->
+
+              <div class="entry-content">
+                <p>
+                  {{b.blog_desc}}
+                </p>
+                <!--<div class="read-more">
+                  <a href="blog-single.html">مطالعه بیشتر</a>
+                </div>-->
+              </div>
+
+            </article>    <!-- End blog entry -->
+{%endfor%}
+            
+            <!--<div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#"></a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>-->
+
+          </div>        <!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">  
+
+              <!--<h3 class="sidebar-title">جستجو</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div> --> <!-- End sidebar search formn-->
+
+             <!-- <h3 class="sidebar-title">دسته بندی ها</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">عمومی <span>(25)</span></a></li>
+                  <li><a href="#">زندگی خوب <span>(12)</span></a></li>
+                  <li><a href="#">مسافرت<span>(5)</span></a></li>
+                  <li><a href="#">طراحی <span>(22)</span></a></li>
+                  <li><a href="#">زیبایی <span>(8)</span></a></li>
+                  <li><a href="#">آموزش <span>(14)</span></a></li>
+                </ul>
+              </div>  --><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">  دسترسی آسان به وب سایت ادراه های شهرکرد و سایت های خبری</h3>
+              
+              <div class="sidebar-item recent-posts"> 
+
+{%for o in office%}                
+                <div class="post-item clearfix">
+                  <img src="{{o.off_pic.url}}" alt="">
+                  <h4><a href="{{o.off_web}}">{{o.off_name}}</a></h4>
+                  <!--<time datetime="2020-01-01">1 اردیبهشت 1400</time> -->
+                </div>
+{%endfor%} 
+              <!--- </div> End sidebar recent posts-->
+
+              <!--<h3 class="sidebar-title">برچسب ها</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">نرم افزار</a></li>
+                  <li><a href="#">آی تی</a></li>
+                  <li><a href="#">کسب و کار</a></li>
+                  <li><a href="#">مک</a></li>
+                  <li><a href="#">طراحی</a></li>
+                  <li><a href="#">آفیس 2016</a></li>
+                  <li><a href="#">سئو</a></li>
+                  <li><a href="#">استدیو</a></li>
+                  <li><a href="#">موبایل</a></li>
+                  <li><a href="#">گوشی موبایل</a></li>
+                  <li><a href="#">دیجیتال مارکتینگ</a></li>
+                </ul>
+              </div>   -->  <!-- End sidebar tags -->
+
+            </div>        <!--End sidebar -->
+
+          </div>          <!-- End blog sidebar --> 
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+  {%endblock%}
+
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->

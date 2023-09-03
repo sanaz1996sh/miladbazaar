@@ -1,0 +1,108 @@
+<!-- End Our Portfolio Section -->
+{%extends 'market_app/base2.html'%}
+
+{%block title%}فروشگاه ها_بازار بزرگ میلاد{%endblock%}
+
+{%block title2%}فروشگاه ها {%endblock%}
+
+{%block bread%}فروشگاه ها {%endblock%}
+
+{%block href%}shop/{%endblock%}
+
+{%block content%}
+
+    <!-- ======= Portfolio Section ======= -->
+    <section class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">همه ی فروشگاه ها </li>
+              <li data-filter=".filter-card">فاز1</li>
+              <li data-filter=".filter-app">فاز2</li>
+              <li data-filter=".filter-web">فاز3</li> 
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+{% for sh in shop2%}        
+          <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
+            <div class="portfolio-item">
+              <img  style="width: 300px;"  src="{{sh.icone.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+                <div>
+                  <a href="{{sh.picture.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{sh.name2}}"><i class="bx bx-plus"></i></a>
+                  <a href="{{sh.id}}" title=" اطلاعات"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+          </div>  
+{%endfor%}
+
+
+
+{% for sh in shop3%}
+           <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
+            <div class="portfolio-item">
+              <img style="width: 300px;" src="{{sh.icone.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+                <div>
+                  <a href="{{sh.picture.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="وب 3"><i class="bx bx-plus"></i></a>
+                  <a href="{{sh.id}}" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+          </div> 
+{%endfor%}
+         
+
+
+
+
+
+{%for sh in shop1%}        
+          <div class="col-lg-4 col-md-6 portfolio-wrap filter-card">
+            <div class="portfolio-item">
+              <img style="width: 300px;" src="{{sh.icone.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+                <div>
+                  <a href="{{sh.picture.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{sh.name1}}"><i class="bx bx-plus"></i></a>
+                  <a href="{{sh.id}}" title="جزئیات"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <a href="{{sh.id}}"><h3>{{sh.name}}</h3></a>
+          </div>
+{%endfor%}      
+
+
+
+
+
+
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  <!-- End #main -->
+  {%endblock%}
+
+  <!-- ======= Footer ======= -->
+ 
+
+ 
