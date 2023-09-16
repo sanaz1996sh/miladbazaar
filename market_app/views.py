@@ -19,8 +19,8 @@ def home(request):
 def shop(request):
    l1=shopcls.objects.filter(phase=1)
    l2=shopcls.objects.filter(phase=2)
-   l3=shopcls.objects.filter(phase=3)
-   return render(request,"market_app/shop.html",context={"shop1":l1,"shop2":l2,"shop3":l3 , "active_tab":"shop"})
+   
+   return render(request,"market_app/shop.html",context={"shop1":l1,"shop2":l2, "active_tab":"shop"})
 
 def blog(request):
     l1=blogcls.objects.all()
