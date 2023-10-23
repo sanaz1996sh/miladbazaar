@@ -28,10 +28,10 @@ def blog(request):
     return render(request,"market_app/blog.html",context={"blog1":l1,"office":l2,"active_tab":"blog"})
 
 def contact(request):
-    n=request.GET.get("name")
-    e=request.GET.get("email")
-    s=request.GET.get("subject")
-    m=request.GET.get("message")
+    n=request.POST.get("name")
+    e=request.POST.get("email")
+    s=request.POST.get("subject")
+    m=request.POST.get("message")
     if(n and e and s and m):
         contactcls.objects.create(name=n,email=e,subject=s,message=m)
         return render(request,"market_app/message.html",{"active_tab":"contact"})
